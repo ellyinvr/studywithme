@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>BENKYO部屋</title>
+  
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/996973c893.js"></script>
+    
+</head>
+<body>
+    
+<div class="roomMei">BENKYO部屋</div>
+
+<div class="all">
+    <div class="videobox">
+        <div class="videosContainer">
+            <video id="myStream" autoplay muted="true"></video>
+        </div>
+    </div>
+
+    
+    <!-- <div class="rightbox"> -->
+        <div class="step">
+            <div id="yourroom"></div>
+            <h2>/</h2>
+            <h2>STEP1</h2>
+            <h4>部屋名を入力。Benkyo部屋に参加。</h4>
+        </div>
+
+        <div class="myControllerContainer">
+            <p>Your id: <span id="my-id">...</span></p>
+            <div class="select">
+                <label for="audioSource">Audio source: </label><select id="audioSource"></select>
+            </div>
+            <div class="select">
+                <label for="videoSource">Video source: </label><select id="videoSource"></select>
+            </div>
+            <form id="make-call">
+                <input type="text" placeholder="部屋名を入力してね" id="join-room">
+                <button type="submit">部屋に入る</button>
+            </form>
+            <div id="end-call">
+                <p>Currently in room <span id="room-id">...</span></p>
+                <button>Leave</button>
+            </div>
+            <!-- <div id="recording">
+                        <button>Recording</button>
+                        <a href="#" id="downloadlink">Download</a>
+                        <p>※ 1:1の場合にリモートを録画可能</p>
+                    </div> -->
+        </div>
+
+        <div class="chat">
+            <div class="step">
+                <h2>/</h2>
+                <h2>STEP2</h2>
+                <h4>やることと目標集中時間をつぶやく。みんなに宣言！</h4>
+            </div>
+            <div class="contents1">
+                <div class="header">
+                    <p>やることと目標集中時間をみんなに宣言</p>
+                </div>
+                <div class="textcontent">
+                    <div id="output"
+                        style=" height: 400px; width:700px; overflow: auto; background:white; border: 1px solid lightgray; ">
+                    </div>
+                </div>
+                <div class="sendbox">
+                    <!-- <div>ユーザー名: <input style="width: 150px; margin-right: 10px; " class="namesend" id="uname" type="text"> -->
+                    <div><input style="width: 350px; height: 45px; margin:6px 8px; border:none;" class="goalsend" id="text" placeholder="　やることを入力　(例：PHPを勉強)">
+                    <input style="width: 175px; height: 45px; margin:6px 3px; border:none;" type="number" class="timesend" id="aimjikan" placeholder="目標集中時間(分)記入">
+                    <button class="btnSend" id="send">宣言</button></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timer">
+            <div class="step">
+                <h2>/</h2>
+                <h2>STEP3</h2>
+                <h4>目標集中時間のタイマーをセットしてBenkyoスタート！集中！</h4>
+            </div>
+            <div id="container">
+                <p id="hour-label" class="label">時間</p>
+                <p id="min-label" class="label">分</p>
+                <p id="sec-label" class="label">秒</p>
+                <input id="hour" type="number" max="99" min="0" value="0" class="time">
+                <p id="p1" class="semicolon">:</p><input id="minute" type="number" max="60" min="0" value="0" class="time">
+                <p id="p2" class="semicolon">:</p><input id="sec" type="number" max="60" min="0" value="0" class="time">
+                <button id="start" class="btntimer">スタート</button>
+                <button id="reset" class="btntimer">リセット</button>
+            </div>
+        </div>
+    
+</div>
+
+<div class="kirokuhe">
+    <p>Benkyo終わった？終わったらKirokuしよう！</p>
+    <a href="../result.html"><button class="btnKiroku">Kirokuする</button></a>
+</div>
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ <!-- 以下Firebase -->
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    
+<!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="settings.js"></script>
+</body>
+</html>

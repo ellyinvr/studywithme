@@ -1,0 +1,76 @@
+html {
+  border-left: 10px solid yellow;
+  /* margin: 0; */
+  height: 800px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+video {
+  width: 1000px;
+  height: 580px;
+}
+
+/* .mainbox01 {
+  width: 80%;
+  height: 570px;
+  text-align: center;
+  background: url("../assets/img/studybg.png");
+  background-size: cover;
+  margin-top: 20px;
+} */
+
+.title {
+  font-size: 100px;
+  color: turquoise;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  /* text-shadow: 1px 1px 1px yellow; */
+  /* width: 700px;
+  height: 300px; */
+}
+
+.textarea {
+  text-decoration: none;
+  /* opacity: 0.2; */
+}
+
+.title p {
+  color: turquoise;
+  font-size: 18px;
+}
+
+.title h1 {
+  padding-top: 10px;
+  font-size: 85px;
+  font-weight: bold;
+  color: white;
+  background-color: aqua;
+  border-bottom: 5px solid turquoise;
+  width: 610px;
+  font-style: italic;
+}
+
+.title h2 {
+  font-size: 19px;
+  color: turquoise;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>KIROKU部屋</title>
+  
+    <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/result.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/996973c893.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js">;
+    </script>
+    
+</head>
+<body>
+    <div class="roomMei">KIROKU部屋</div>
+
+        <div class="curaka">
+         <img src="http://thecatapi.com/api/images/get?format=src&type=gif&size=big" alt="">
+        </div>
+
+    <div class="settei">設定した目標集中時間は<span id="aim"></span>でした</div>
+
+    <div class="all">
+        <div class="box_upper">
+            <div class="header">
+                <p>達成したことを記録</p>
+            </div>
+            <div class="sendbox">
+                <table>
+                    <tr>
+                        <td><textarea cols="30" rows="3" class="textsend" id="text" placeholder="(例)達成したことを記入&#13;①PHPを１時間勉強&#13;②Udemyで2時間勉強"></textarea></td>
+                        <td><input type="number" class="timesend" id="time" style="width: 140px;" placeholder="達成集中時間(分)"></td>
+                        <td><button class="btn" id="send">記録</button></td>
+                    </tr>
+                    <tr class="midashi">
+                        <th>/達成したこと</th>
+                        <th>/達成集中時間</th>
+                        <th>/日付</th>
+                    </tr>
+                    <tr id="addedItem">
+                        <td id="output1"></td>
+                        <td id="output2"></td>
+                        <td id="output3"></td>
+                        <!-- <td id="delete"></td> -->
+                    </tr>
+                </table>            
+            </div>
+        </div>
+
+        <div class="box_lower">
+            <div id="chartContainer"></div>
+        </div>
+    </div>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- 以下Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+        
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="js/result.js"></script>
+    <!-- <script src="skyway/settings.js"></script> -->
+
+</body>
+</html>

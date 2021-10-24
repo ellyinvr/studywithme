@@ -1,0 +1,366 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+  border-left: 10px solid yellow;
+  margin: 0;
+  height: 2300px;
+}
+
+body {
+     background-color: white;
+     background-size: cover; 
+    font-family: 'M PLUS Rounded 1c', sans-serif; 
+}
+
+
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+ }
+
+.all {
+    padding-left: 20px;
+}
+
+.roomMei {
+    width: 180px;
+    font-size: 25px;
+    border-bottom: 3px solid coral;
+}
+
+.roomName {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(97, 96, 96);
+    padding-bottom: 70px;
+}
+
+.roomName span {
+    color: coral;
+}
+
+.videosContainer {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    top: 0; 
+    padding-left: 10px;
+    padding-top: 50px;
+}
+
+/* .myControllerContainer {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    padding-left: 20px;
+    color: rgb(80, 66, 66)
+    text-align: center;
+} */
+
+#my-id {
+    font-weight: bold;
+}
+
+.select {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+form {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+div #recording, div #end-call {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#end-call {
+    display: none;
+}
+
+#recording {
+    display: none;
+}
+#downloadlink {
+    display: none;
+}
+
+ input[type=text]{
+    border-radius: 5px;
+    border:#a9a9a9 1px solid;
+    /* box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3); */
+    width:30%;
+    font-size: 15px;
+    padding: 9px;
+    margin-right: 15px;
+}
+
+input[type=text]:focus {
+    border:solid 1px #20b2aa;
+}
+
+input[type=text], select {
+    outline: none;
+}
+
+button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px 8px 10px;
+    color: #fff;
+    border-style: none;
+    /* text-shadow: 1px 1px 2px #000; */
+    background: turquoise;
+    border-radius: 5px;
+    width: 140px;
+}
+
+button:hover {
+    /* 透明度を20%に指定 */
+    opacity: 0.8;
+}
+.videobox {
+    height: 180px;
+}
+
+
+video {
+    float: left;
+}
+
+.videosContainer video {
+    height: 200px;
+}
+
+.videosContainer video:first-child:nth-last-child(1),
+.videosContainer video:first-child:nth-last-child(1) ~ video {
+    width: 100%;
+}
+
+.videosContainer video:first-child:nth-last-child(2),
+.videosContainer video:first-child:nth-last-child(2) ~ video {
+    width: 50%;
+}
+
+.videosContainer video:first-child:nth-last-child(3),
+.videosContainer video:first-child:nth-last-child(3) ~ video {
+    width: 33.33333%;
+}
+
+.videosContainer video:first-child:nth-last-child(4),
+.videosContainer video:first-child:nth-last-child(4) ~ video {
+    width: 25%;
+}
+
+.videosContainer video:first-child:nth-last-child(5),
+.videosContainer video:first-child:nth-last-child(5) ~ video {
+    width: 20%;
+}
+
+.videosContainer video:first-child:nth-last-child(6),
+.videosContainer video:first-child:nth-last-child(6) ~ video {
+    width: 16.66667%;
+}
+
+.videosContainer video:first-child:nth-last-child(7),
+.videosContainer video:first-child:nth-last-child(7) ~ video {
+    width: 14.28571%;
+}
+
+.videosContainer video:first-child:nth-last-child(8),
+.videosContainer video:first-child:nth-last-child(8) ~ video {
+    width: 12.5%;
+}
+
+
+/* 左側のBOXの設定 */
+.leftbox {
+    height: 800px;
+    width: 30%;
+    /* flex-grow: 1; */
+}
+
+/* ここから右側のBOXの設定 */
+.step {
+    font-size: 25px;
+    color: rgb(97, 96, 96);
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.step h2 {
+    color: coral;
+}
+
+
+/* .step h3 {
+    border-bottom: 4px solid yellow;
+} */
+
+.rightbox {
+    height: 800px;
+    width: 70%;
+    /* background-color: pink; */
+    /* flex-grow: 1; */
+}
+
+/* timerボックスの設定 */
+
+#container {
+    height: 200px;
+    width: 700px;
+    background-color:white;
+
+    border: 3px solid turquoise;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/*label*/
+.label {
+    margin: 0;
+
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+}
+
+#hour-label {
+    grid-area: 1 / 2 / 1 / 3;
+}
+
+#min-label {
+    grid-area: 1 / 3 / 1 / 4;
+}
+
+#sec-label {
+    grid-area: 1 / 4 / 1 / 5;
+}
+
+/*times*/
+.time {
+    justify-self: center;
+    align-self: center;
+
+    border: 1px solid lightslategrey;
+    background-color: #ffffff00;
+    font-size: 50px;
+    /* width: 70px; */
+    height: 50px;
+}
+
+#hour {
+    grid-area: 2 / 2 / 2 / 3;
+}
+
+.semicolon {
+    justify-self: center;
+    align-self: center;
+
+    font-size: 30px;
+    margin: 0;
+}
+#p1 {
+    grid-area: 2 / 2 / 2 / 4;
+}
+
+#minute {
+    grid-area: 2 / 3 / 2 / 4;
+}
+
+#p2 {
+    grid-area: 2 / 3 / 2 / 5;
+}
+
+#sec {
+    grid-area: 2 / 4 / 2 / 5;
+}
+
+/*buttons*/
+ .btntimer {
+    align-self: center;
+    
+    width: 120px;
+    height: 50px;
+
+    font-size: 25px;
+    justify-self: center;
+}
+
+#start {
+    grid-area: 3 / 2 / 3 / 4;
+}
+
+#reset {
+    grid-area: 3 / 3 / 3 / 5;
+}
+
+/* chatボックスの設定 */
+.header {
+   height: 50px;
+   width: 700px;
+   background-color:coral;
+   text-align: center;
+   color: white;
+   font-size: 20px;
+}
+
+.header p {
+    padding-top: 12px;
+}
+
+.mytext {
+    font-size: 22px;
+}
+
+.mytext span {
+    font-size: 15px;
+}
+
+.sendbox {
+    width: 700px;
+    height: 60px;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;  /* 枠線 */
+}
+
+.btnSend {
+    background-color: turquoise;
+    width: 130px;
+    height: 45px;
+}
+
+.btnKiroku {
+    background-color: coral;
+    width: 170px;
+    height: 50px;
+    font-size: 25px;
+}
+
+.kirokuhe {
+    padding-top: 100px;
+    padding-right: 200px;
+    text-align: right;
+}
+
+.kirokuhe p {
+    font-size: 22px;
+}
+
+
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+  background-color: #5ab4bd;
+  color: #fff;
+}

@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    border-left: 10px solid yellow;
+    margin: 0;
+    height: 1200px;
+}
+
+.all {
+    display: flex;
+    padding: 20px 20px 0 20px;
+}
+
+.roomMei {
+    width: 160px;
+    font-size: 25px;
+    border-bottom: 3px solid coral;
+    margin-bottom: 50px;
+}
+
+.settei {
+   padding-left: 65px;
+   font-size: 18px;
+}
+
+.settei span {
+    color: coral;
+}
+
+.curaka img{
+    display: none;
+    position: absolute;
+    margin-left: 300px;
+    margin-right: 300px;
+    width: 750px;
+    height: 750px;
+    border: 9px solid aqua;
+    z-index: 2;
+
+    /* background-color: aliceblue; */
+}
+/* 
+.curaka {
+    display: none;
+    width: 800px;
+    height: 800px;
+    z-index: 1;
+    background-color: aliceblue;
+
+} */
+
+.aimTime {
+    padding-left: 420px;
+}
+
+/* 上側の達成画面の設定 */
+.box_upper {
+    height: 500px;
+    width: 700px;
+    background-color: white;
+    /* margin: auto; */
+}
+
+/* chatボックスの設定 */
+.header {
+   height: 50px;
+   width: 600px;
+   background-color:coral;
+   text-align: center;
+   margin: auto;
+   color: cornsilk;
+}
+
+.header p {
+    font-size: 20px;
+    padding-top: 12px;
+}
+
+.sendbox {
+    width: 600px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid lightgray; 
+    margin: auto;
+}
+
+table {
+    border: none;
+}
+
+th, td {
+    padding: 10px 2px 5px 15px;
+}
+
+#send {
+    background-color: turquoise;
+    width: 80px;
+    height: 45px;
+    color: white;
+}
+
+.midashi {
+    color: coral;
+}
+
+#output {
+    margin: auto; 
+    height:500px; 
+    width:400px; 
+    overflow: auto; 
+    background:white; 
+}
+
+
+/* 下側のBOXの設定 */
+.box_lower {
+    height: 600px;
+    width: 700px;
+    margin: auto;
+}
+
+
